@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.background_widget {
+    border: 1px solid #363636;
+    color: #d6d6d6;
+    background-color: #222327;
+    margin: 5px;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+    background: #404040;
+}
+
+::-webkit-scrollbar-button {
+    background: #404040;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5c5c5c;
+}

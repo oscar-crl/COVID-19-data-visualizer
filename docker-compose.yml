@@ -1,0 +1,39 @@
+# Production docker-compose.yml file
+version: '3'
+
+# Declare all services
+services:
+
+  # Add server/api service
+  server:
+    restart: always
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./server:/server"
+    command: ./gradlew --project-cache-dir /tmp/gradle-cache bootRun
+
+  # Web client in angular
+  web:
+    restart: always
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - server
+    volumes:
+      - "./web/node_modules"
+      - "./web:/web"
+
+  # Build flutter apk
+  mobile:
+    build:
+      context: ./mobile
+      dockerfile: Dockerfile
+    volumes:
+      - ./mobile:/shared-volume

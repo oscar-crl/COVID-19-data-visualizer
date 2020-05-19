@@ -1,0 +1,35 @@
+<div class="container-fluid" style="margin-top: 10px">
+  <div class="row" style="margin-bottom: 1rem;">
+    <div class="col-7">
+      <div class="background_widget" style="margin-top: 30px">
+        <h3 class="text-left" style="margin-left: 3rem">
+          {{title}}
+        </h3>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="background_widget">
+        <h1 class="text-center font-weight-bold" style="margin-top: 10px; margin-bottom: -5px">
+          {{total_countries}}
+        </h1>
+        <p class="text-center font-weight-bold" style="margin-bottom: 8px">
+          Countries/Regions
+        </p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="background_widget">
+        <h4 class="text-center" style="margin-top: 10px;">
+          Last update at (M/D/YYYY)
+        </h4>
+        <h4 class="text-center font-weight-bold" style="margin-bottom: 8px">
+          {{last_update}}
+        </h4>
+      </div>
+    </div>
+  </div>
+  <app-widget-data></app-widget-data>
+  <app-widget-graph></app-widget-graph>
+  <app-widget-map></app-widget-map>
+</div>
+<router-outlet></router-outlet>

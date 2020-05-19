@@ -1,0 +1,38 @@
+<div class="row" style="margin-top: 30px; padding-bottom: 50px">
+    <div class="col-4">
+        <div class="background_widget" style="height: 500px">
+            <div class="text-center" style="margin-top: 20px">
+                <h1>
+                    Search :
+                </h1>
+                <label>
+                    <input type="text" placeholder="" [(ngModel)]="searchCountries" (input)="Search()"/>
+                </label>
+            </div>
+            <div class="overflow-auto" style="height: 360px;">
+                <div class="row" *ngFor="let country of countriesTmp" style="border-bottom:1px solid #5c5c5c">
+                    <div class="col-10">
+                        <p style="margin-bottom: 5px; margin-top: 5px; margin-left: 10px;">{{country.country}}</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="button fa fa-search" style="margin-bottom: 5px; margin-top: 5px" (click)="setCountryFocus(country)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-widget-country></app-widget-country>
+    </div>
+    <div class="col-8">
+        <div class="background_widget">
+            <h1 class="text-center text-capitalize font-weight-bold">
+                MAP
+            </h1>
+        </div>
+        <app-esri-map
+            [center]="mapCenter"
+            [basemap]="baseMapType"
+            [zoom]="mapZoomLevel"
+            (mapLoadedEvent)="mapLoadedEvent($event)">
+        </app-esri-map>
+    </div>
+</div>

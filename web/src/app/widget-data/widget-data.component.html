@@ -1,0 +1,74 @@
+<div class="row" style="margin-bottom: 2rem">
+    <div class="col-3">
+        <div class="background_widget" style="height: 450px">
+            <h5 class="text-center" style="margin-top: 10px;">
+                Total Confirmed
+            </h5>
+            <h1 class="text-center font-weight-bold" style="color: red">
+                {{total_confirmed}}
+            </h1>
+            <div class="overflow-auto" style="height: 350px;">
+                <div *ngFor="let country of countries" style="border-bottom:1px solid #5c5c5c">
+                    <p style="margin-left: 15px; margin-bottom: 5px; margin-top: 5px;">
+                        <span class="font-weight-bold" style="color: red; letter-spacing: 1px">{{country.confirmed}}<small>&nbsp;confirmed</small></span>
+                        <br><span style="margin-left: 5px"><small>{{country.country}}</small></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="background_widget" style="height: 450px">
+            <h5 class="text-center" style="margin-top: 10px;">
+                Total Deaths
+            </h5>
+            <h1 class="text-center font-weight-bold" style="color: lightslategrey">
+                {{total_deaths}}
+            </h1>
+            <div class="overflow-auto" style="height: 350px;">
+                <div *ngFor="let country of countries" style="border-bottom:1px solid #5c5c5c">
+                    <p style="margin-left: 15px; margin-bottom: 5px; margin-top: 5px;">
+                        <span class="font-weight-bold" style="color: lightslategrey; letter-spacing: 1px">{{country.deaths}}<small>&nbsp;deaths</small></span>
+                        <br><span style="margin-left: 5px"><small>{{country.country}}</small></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="background_widget" style="height: 450px">
+            <h5 class="text-center" style="margin-top: 10px;">
+                Total Recovered
+            </h5>
+            <h1 class="text-center font-weight-bold" style="color: forestgreen">
+                {{total_recovered}}
+            </h1>
+            <div class="overflow-auto" style="height: 350px;">
+                <div *ngFor="let country of countries" style="border-bottom:1px solid #5c5c5c">
+                    <p style="margin-left: 15px; margin-bottom: 5px; margin-top: 5px;">
+                        <span class="font-weight-bold" style="color: forestgreen; letter-spacing: 1px">{{country.recovered}}<small>&nbsp;recovered</small></span>
+                        <br><span style="margin-left: 5px"><small>{{country.country}}</small></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="background_widget" style="height: 450px">
+            <h5 class="text-center" style="margin-top: 10px;">
+                Total Critical cases
+            </h5>
+            <h1 class="text-center font-weight-bold" style="color: cornflowerblue">
+                {{total_critical}}
+            </h1>
+            <div class="overflow-auto" style="height: 350px;">
+                <div *ngFor="let country of countries" style="border-bottom:1px solid #5c5c5c">
+                    <p style="margin-left: 15px; margin-bottom: 5px; margin-top: 5px;">
+                        <span class="font-weight-bold" style="color: cornflowerblue; letter-spacing: 1px">{{country.critical}}<small>&nbsp;critical cases</small></span>
+                        <br><span style="margin-left: 5px"><small>{{country.country}}</small></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf='countrySelected != ""'>
+    <div class="background_widget">
+        <h4 class="text-center text-capitalize font-weight-bold" style="margin-top: 10px">
+            {{countrySelected}}: data for the last 14 days
+        </h4>
+        <div style="display: block">
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+</div>

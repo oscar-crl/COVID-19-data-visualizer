@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-4">
+        <div class="background_widget">
+            <h4 class="text-center text-capitalize font-weight-bold" style="margin-top: 10px">
+                Total data for the last 14 days
+            </h4>
+            <div style="display: block">
+                <canvas baseChart
+                        [datasets]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="background_widget">
+            <h4 class="text-center text-capitalize font-weight-bold" style="margin-top: 10px">
+                Total data for the last 14 days
+            </h4>
+            <div style="display: block">
+                <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="background_widget">
+            <h4 class="text-center text-capitalize font-weight-bold" style="margin-top: 10px">
+                Total data for the last 14 days
+            </h4>
+            <div style="display: block">
+                <canvas baseChart
+                        [datasets]="radarChartData"
+                        [labels]="radarChartLabels"
+                        [options]="radarChartOptions"
+                        [legend]="radarChartLegend"
+                        [chartType]="radarChartType">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
